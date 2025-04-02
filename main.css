@@ -1,0 +1,265 @@
+* {
+  /* border: 1px solid rgb(17, 0, 255); */
+}
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
+
+@font-face {
+  font-family: "PPHatton_ul";
+  src: url("PP_Hatton/otf/PPHatton-Ultralight.otf");
+}
+@font-face {
+  font-family: "agright";
+  font-variant-ligatures: common-ligatures;
+  src: url("agright-demo\agright regular.ttf");
+}
+
+:root {
+  --my-red: #ff0001;
+  --my-yellow: #f1f5c3;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "agright";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: var(--my-yellow);
+  color: var(--my-red);
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+
+.hero {
+  /* background-image: linear-gradient(to top right,var(--my-red),rgb(252, 198, 198),var(--my-yellow)); */
+  background-image: url(wallpaperflare.com_wallpaper.jpg);
+  background-color: var(--my-yellow);
+  color: var(--my-red);
+  height: 100vh;
+  width: 98.5vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-areas: 
+    " .    pic    pic  .  .    .    ."
+  " .    .    arrow    . name    name   name"
+  " .    .    .    . hero_p  hero_p hero_p";
+}
+
+#window{
+  grid-row: 2;
+  grid-column: 2;
+  height: 100%;
+  width: 100%;
+  background-color: #ff0001;
+}
+#Name {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13rem;
+  grid-area: name;
+  margin: 0px;
+  justify-self: center;
+  align-self: flex-end;
+}
+
+#Hi {
+  grid-row: 2;
+  grid-column: 7;
+  font-size: 5rem;
+  /* color: #ff0001; */
+  margin: 0px;
+  padding: 0px;
+  color: #313024;
+  font-family: "EB Garamond";
+  align-self: flex-start;
+}
+img{
+  align-self: flex-start;
+  justify-self: center;
+  grid-area: arrow;
+  width: 40%;
+}
+#pic{
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
+  grid-area: pic;
+  align-self: flex-end;
+}
+#I_m{
+  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  transform: translateX(-10px);
+  grid-column: 5;
+  grid-row: 2;
+  font-size: 5rem;
+  justify-self: flex-start;
+  align-self: flex-end;
+  /* margin-bottom: 2%; */
+  font-family: "EB Garamond";
+}
+#Hero_p{
+  transform: translateY(-45px);
+  margin: 0px;
+  align-self: flex-start;
+  justify-self: center;
+  grid-area: hero_p;
+  font-size: 1.5em;
+  color: #313024;
+  text-align: right;
+}
+#Trying{
+  color: var(--my-red);
+  text-shadow: 0px 0px 5px black;
+}
+#traverse{
+  color: #ff0001;
+}
+#encloser{
+    grid-row: 3;
+    grid-column: 3 / span 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+#Button_container{
+  grid-row: 3;
+  grid-column: 3/ span 3;
+  display: flex;
+  /* max-width: 300px; */
+}
+#Button_container hr{
+  width: 100%;
+  height: 0px;
+  border: 1px solid #ff0001;
+  min-width: 100px;
+  transform: translateY(10px);
+}
+#projects_btn{
+  border: 1px solid var(--my-red);
+  height: 40px;
+  width: 140px;
+  border-radius: 20px;
+  color: var(--my-red);
+  font-size: 1.1rem;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover{
+    width: 160px;
+    background-color: var(--my-red);
+    color: var(--my-yellow);
+    border: none;
+  }
+}
+#about_btn{
+  background-color: var(--my-red);
+  border: none;
+  height: 40px;
+  width: 140px;
+  border-radius: 20px;
+  color: var(--my-yellow);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover{
+    width: 160px;
+    background-color: var(--my-yellow);
+    color: var(--my-red);
+    border: 1px solid var(--my-red);
+  }
+}
+#about {
+  background-color: #FFFFFF;
+}
+#abt_grid_container{
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(10,1fr);
+  grid-template-columns: repeat(9,1fr);
+}
+#abt_txt{
+  font-family: Helvetica, sans-serif;
+  font-size: 5em;
+  color: var(--my-yellow);
+  /* grid-row: 2 / span 2;
+  grid-column: 4 / span 3; */
+}
+#red_curved_bg{
+  height: 100%;
+  width: 100%;
+  justify-self: center;
+  border-bottom-right-radius: 10cap;
+  border-bottom-left-radius: 10cap;
+  /* border-top-left-radius: 2cap;
+  border-top-right-radius: 2cap; */
+  grid-area: red_area;
+  grid-row: 1 / span 4;
+  grid-column: 4 / span 3;
+  background-color: #F20202;
+}
+#red_left{
+  background-color: #F20202;
+  grid-column: 1 / span 3;
+}
+#red_right{
+  background-color: #F20202;
+  grid-column: 7 / span 3;
+}
+#point1{
+  grid-row: 5;
+  grid-column: 1 / span 3;
+}
+#point2{
+  grid-row: 6 / span 2;
+  grid-column: 4 / span 3;
+}
+#point3{
+  grid-row: 8 / span 3;
+  grid-column: 7 / span 4;
+}
+.points{
+  font-size: 1.1rem;
+  color: #313024;
+  font-family: Helvetica, sans-serif;
+  font-weight: 700;
+}
+.points span{
+  color: var(--my-red);
+}
+.projects {
+  background: #ccc;
+}
+
+.contact {
+  background: #bbb;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #333;
+  color: white;
+}
