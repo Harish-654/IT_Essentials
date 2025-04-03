@@ -351,3 +351,142 @@ footer {
   background: #333;
   color: white;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  #Name {
+    font-size: 10rem;
+  }
+  
+  #Hi, #I_m {
+    font-size: 4rem;
+  }
+  
+  #Hero_p {
+    font-size: 1.3em;
+  }
+  
+  .cl_projects h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: 
+      "pic pic pic . ."
+      ". arrow . name name"
+      ". . . hero_p hero_p";
+  }
+  
+  #Name {
+    font-size: 8rem;
+  }
+  
+  #abt_txt {
+    font-size: 3.5em;
+  }
+  
+  .points {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+      "pic pic pic"
+      "arrow . name"
+      ". hero_p hero_p";
+  }
+  
+  #Name {
+    font-size: 6rem;
+  }
+  
+  #Hi, #I_m {
+    font-size: 3rem;
+  }
+  
+  #Hero_p {
+    font-size: 1.1em;
+  }
+  
+  #Button_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #Button_container hr {
+    display: none;
+  }
+  
+  .cl_projects h2 {
+    font-size: 4rem;
+  }
+  
+  .project-card {
+    min-width: 250px;
+  }
+  
+  #abt_grid_container {
+    padding: 0 1rem;
+  }
+  
+  #abt_txt {
+    font-size: 3em;
+    grid-column: 1 / span 10;
+  }
+  
+  #point1, #point2, #point3 {
+    grid-column: 1 / span 10;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "pic"
+      "arrow"
+      "name"
+      "hero_p";
+    text-align: center;
+  }
+  
+  #Name {
+    font-size: 5rem;
+  }
+  
+  #Hi, #I_m {
+    font-size: 2.5rem;
+  }
+  
+  #Hero_p {
+    font-size: 1em;
+  }
+  
+  img {
+    width: 30%;
+  }
+  
+  .cl_projects h2 {
+    font-size: 3rem;
+  }
+  
+  .project-card {
+    min-width: 200px;
+  }
+  
+  #abt_txt {
+    font-size: 2.5em;
+  }
+  
+  .points {
+    font-size: 0.9rem;
+  }
+}
