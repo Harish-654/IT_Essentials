@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
 
 @font-face {
-  font-family: "PPHatton_ul";
-  src: url("PP_Hatton/otf/PPHatton-Ultralight.otf");
+  font-family: "Hatton_light";
+  src: url("fonts/hatton-font-family/PP Hatton Ultralight 200.otf");
 }
 @font-face {
   font-family: "agright";
@@ -15,8 +15,18 @@
 
 :root {
   --my-red: #ff0001;
-  --my-yellow: #f1f5c3;
+  --my-yellow: #ffffff;
 }
+
+html {
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,6 +55,7 @@ section {
   align-items: center;
   height: 100vh;
   text-align: center;
+  
 }
 
 
@@ -145,7 +156,7 @@ img{
     display: flex;
     justify-content: center; 
     align-items: center;
-}
+  }
 #Button_container{
   grid-row: 3;
   grid-column: 3/ span 3;
@@ -155,28 +166,28 @@ img{
 #Button_container hr{
   width: 100%;
   height: 0px;
-  border: 1px solid #ff0001;
+  border: 1px solid #c50404;
   min-width: 100px;
   transform: translateY(10px);
 }
 #projects_btn{
-  border: 1px solid var(--my-red);
+  border: 1px solid #c50404;
   height: 40px;
   width: 140px;
   border-radius: 20px;
-  color: var(--my-red);
+  color: #c50404;
   font-size: 1.1rem;
   transition: 0.5s;
   cursor: pointer;
   &:hover{
     width: 160px;
-    background-color: var(--my-red);
-    color: var(--my-yellow);
+    background-color: #c50404;
+    color: white;
     border: none;
   }
 }
 #about_btn{
-  background-color: var(--my-red);
+  background-color: #d40505;
   border: none;
   height: 40px;
   width: 140px;
@@ -187,18 +198,107 @@ img{
   transition: 0.5s;
   &:hover{
     width: 160px;
-    background-color: var(--my-yellow);
-    color: var(--my-red);
-    border: 1px solid var(--my-red);
+    background-color: #f0f0f0;
+    color: #c50404;
+    border: 1px solid #c50404;
   }
 }
+.cl_projects {
+  scroll-snap-align: none;
+  /* background-image: linear-gradient(red,#880808,#d6c7bc); */
+  background-color: #621414;
+  color: white;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.cl_projects h2 {
+  font-family: "Hatton_light", cursive;
+  font-size: 7rem;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 2rem 0;
+}
+
+.scroll-content {
+  display: flex;
+  animation: scroll 25s linear infinite;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.scroll-container:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+.project-card {
+  min-width: 300px;
+  background-color: white;
+  border: 2px solid #e6dcdc;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  background-color: #801818;
+  color: var(--my-yellow);
+}
+
+.project-card:hover h3,
+.project-card:hover p {
+  color: var(--my-yellow);
+}
+
+.project-card h3 {
+  color: #880808;
+  font-family: "EB Garamond", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+.project-card p {
+  color: #313024;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 #about {
-  background-image: url(img/red_moon.jpg);
+  background-image: url(img/abstract.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
-  background-position-y: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
+
 #abt_grid_container{
   height: 100%;
   width: 100%;
@@ -209,14 +309,16 @@ img{
 #abt_txt{
   font-family: Helvetica, sans-serif;
   font-size: 4.5em;
-  text-align: left;
-  color: var(--my-yellow);
+  text-align: center;
+  color: #880808;
   grid-row: 2 / span 3;
-  grid-column: 5 / span 4;
+  grid-column: 1 / span 4;
+  text-shadow: 0px 0px 10px #ffffff;
 }
 #point1{
-  grid-row: 2 / span 2;
-  grid-column: 1 / span 3;
+  grid-row: 5 / span 2;
+  grid-column: 2 / span 4;
+  text-align: left;
 }
 #point2{
   grid-row: 5 / span 2;
@@ -233,7 +335,7 @@ img{
   font-weight: 700;
 }
 .points span{
-  color: var(--my-red);
+  color: #880808;
 }
 .projects {
   background: #ccc;
