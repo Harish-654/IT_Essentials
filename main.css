@@ -51,7 +51,9 @@ section {
 .hero {
   /* background-image: linear-gradient(to top right,var(--my-red),rgb(252, 198, 198),var(--my-yellow)); */
   background-image: url(wallpaperflare.com_wallpaper.jpg);
-  background-color: var(--my-yellow);
+  /* background-color: var(--my-yellow); */
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--my-red);
   height: 100vh;
   width: 98.5vw;
