@@ -25,16 +25,13 @@ html {
 section {
   scroll-snap-align: start;
 }
-
-
-html {
-  scroll-behavior: smooth;
-}
+  
 body {
   font-family: "agright";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100vw;
 }
 
 header {
@@ -54,89 +51,91 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  max-width: 100vw;
   text-align: center;
   
 }
 
 
 .hero {
-  /* background-image: linear-gradient(to top right,var(--my-red),rgb(252, 198, 198),var(--my-yellow)); */
   background-image: url(img/wallpaperflare.com_wallpaper.jpg);
-  /* background-color: var(--my-yellow); */
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--my-red);
   height: 100vh;
-  width: 98.5vw;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: repeat(7, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  grid-template-areas: 
-    " .    pic    pic  .  .    .    ."
-  " .    .    arrow    . name    name   name"
-  " .    .    .    . hero_p  hero_p hero_p";
+  margin-right: 10px;
 }
 
-#window{
-  grid-row: 2;
-  grid-column: 2;
-  height: 100%;
-  width: 100%;
-  background-color: #ff0001;
-}
 #Name {
   font-family: "Imperial Script", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 13rem;
-  grid-area: name;
   margin: 0px;
-  justify-self: center;
-  align-self: flex-end;
 }
-
+#hero_text_container{
+  grid-row: 3 / span 3;
+    grid-column: 4 / span 4;
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+#I_m_Harish{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
 #Hi {
-  grid-row: 2;
-  grid-column: 7;
+  transform: translateY(80%);
+  /* align-self: flex-end; */
   font-size: 5rem;
   /* color: #ff0001; */
   margin: 0px;
   padding: 0px;
   color: #313024;
+  display: inline-block;
+  max-width: 100px;
   font-family: "EB Garamond";
-  align-self: flex-start;
+    align-self: flex-end;
+    justify-items: flex-end;
 }
 img{
-  align-self: flex-start;
+  grid-column: 3 / span 1;
+  grid-row: 2;
+  align-self: center;
   justify-self: center;
-  grid-area: arrow;
   width: 40%;
 }
 #pic{
+  grid-row: 1;
+  grid-column: 1 / span 3;
   font-family: Helvetica, sans-serif;
-  font-size: 1.2em;
-  grid-area: pic;
+  font-size: 1.3em;
   align-self: flex-end;
 }
 #I_m{
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
-  transform: translateX(-10px);
   grid-column: 5;
   grid-row: 2;
   font-size: 5rem;
-  justify-self: flex-start;
-  align-self: flex-end;
+  padding: 0px;
+  transform: translateX(80%);
+  /* justify-self: flex-start; */
+  /* align-self: flex-end; */
   /* margin-bottom: 2%; */
   font-family: "EB Garamond";
 }
 #Hero_p{
-  transform: translateY(-45px);
   margin: 0px;
-  align-self: flex-start;
-  justify-self: center;
-  grid-area: hero_p;
+  align-self: flex-end;
+  justify-self: flex-start;
+  transform: translateY(-50%);
   font-size: 1.5em;
   color: #313024;
   text-align: right;
@@ -149,7 +148,7 @@ img{
   color: #ff0001;
 }
 #encloser{
-    grid-row: 3;
+    grid-row: 7;
     grid-column: 3 / span 3;
     height: 100%;
     width: 100%;
@@ -205,11 +204,11 @@ img{
 }
 .cl_projects {
   scroll-snap-align: none;
-  /* background-image: linear-gradient(red,#880808,#d6c7bc); */
   background-color: #621414;
   color: white;
   flex-direction: column;
   padding: 2rem 0;
+  min-height: 100vh;
 }
 
 .cl_projects h2 {
@@ -218,6 +217,7 @@ img{
   margin-bottom: 2rem;
   margin-top: 1rem;
   color: white;
+  text-align: center;
 }
 
 .scroll-container {
@@ -236,6 +236,10 @@ img{
 
 .scroll-container:hover .scroll-content {
   animation-play-state: paused;
+}
+
+.projects-container {
+  display: none;
 }
 
 .project-card {
@@ -352,48 +356,124 @@ footer {
   color: white;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 1200px) {
-  #Name {
-    font-size: 10rem;
-  }
-  
-  #Hi, #I_m {
-    font-size: 4rem;
-  }
-  
-  #Hero_p {
-    font-size: 1.3em;
-  }
-  
-  .cl_projects h2 {
-    font-size: 5rem;
-  }
+/* Contact Section Styling */
+.contact {
+  background-color: var(--my-yellow);
+  color: #801818;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-@media screen and (max-width: 992px) {
-  .hero {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: 
-      "pic pic pic . ."
-      ". arrow . name name"
-      ". . . hero_p hero_p";
+.contact-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact h2 {
+  font-family: "Hatton_light", cursive;
+  font-size: 7rem;
+  margin-bottom: 3rem;
+  color: #801818;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: #801818;
+  color: var(--my-yellow);
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  width: 300px;
+  justify-content: center;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 0, 1, 0.3);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+}
+
+/* Responsive styles for contact section */
+@media screen and (max-width: 768px) {
+  .contact h2 {
+    font-size: 5rem;
   }
   
-  #Name {
-    font-size: 8rem;
-  }
-  
-  #abt_txt {
-    font-size: 3.5em;
-  }
-  
-  .points {
+  .contact-item {
+    width: 250px;
     font-size: 1rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
+  .contact h2 {
+    font-size: 4rem;
+  }
+  
+  .contact-item {
+    width: 220px;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contact h2 {
+    font-size: 3rem;
+  }
+  
+  .contact-item {
+    width: 200px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Base styles for large screens (above 1200px) */
+#Name {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13rem;
+  margin: 0px;
+}
+
+#Hi, #I_m {
+  font-size: 5rem;
+}
+
+#Hero_p {
+  font-size: 1.5em;
+}
+
+.cl_projects h2 {
+  font-size: 7rem;
+}
+
+/* Responsive Design - from largest to smallest */
+@media screen and (max-width: 1200px) {
+  #Name {
+    font-size: 10rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .hero {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -402,52 +482,30 @@ footer {
       ". hero_p hero_p";
   }
   
-  #Name {
-    font-size: 6rem;
-  }
-  
-  #Hi, #I_m {
-    font-size: 3rem;
-  }
-  
-  #Hero_p {
-    font-size: 1.1em;
-  }
-  
-  #Button_container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #Button_container hr {
-    display: none;
-  }
-  
   .cl_projects h2 {
-    font-size: 4rem;
-  }
-  
-  .project-card {
-    min-width: 250px;
-  }
-  
-  #abt_grid_container {
-    padding: 0 1rem;
-  }
-  
-  #abt_txt {
-    font-size: 3em;
-    grid-column: 1 / span 10;
-  }
-  
-  #point1, #point2, #point3 {
-    grid-column: 1 / span 10;
-    text-align: center;
+    font-size: 6rem;
   }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 992px) {
+  #Name {
+    font-size: 8rem;
+  }
+  
+  #Hi, #I_m {
+    font-size: 3.5rem;
+  }
+  
+  #Hero_p {
+    font-size: 1.2em;
+  }
+  
+  .cl_projects h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .hero {
     grid-template-columns: 1fr;
     grid-template-areas: 
@@ -456,10 +514,12 @@ footer {
       "name"
       "hero_p";
     text-align: center;
+    padding: 0 1rem;
   }
-  
+
   #Name {
     font-size: 5rem;
+    justify-self: center;
   }
   
   #Hi, #I_m {
@@ -468,25 +528,117 @@ footer {
   
   #Hero_p {
     font-size: 1em;
+    text-align: center;
+  }
+
+  #Button_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  #Button_container hr {
+    display: none;
+  }
+
+  #about_btn, #projects_btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .cl_projects h2 {
+    font-size: 4rem;
+    padding: 0 1rem;
+  }
+
+  /* Switch to card layout for smaller screens */
+  .scroll-container {
+    display: none;
+  }
+
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    padding: 0 0.5rem;
+  }
+
+  #Name {
+    font-size: 4rem;
   }
   
+  #Hi, #I_m {
+    font-size: 2rem;
+  }
+  
+  #Hero_p {
+    font-size: 0.9em;
+  }
+
   img {
     width: 30%;
   }
-  
+
   .cl_projects h2 {
     font-size: 3rem;
   }
-  
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
   .project-card {
     min-width: 200px;
+    padding: 1rem;
   }
-  
+
   #abt_txt {
     font-size: 2.5em;
   }
-  
+
   .points {
     font-size: 0.9rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  .contact {
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #Name {
+    font-size: 3.5rem;
+  }
+  
+  #Hi, #I_m {
+    font-size: 1.8rem;
+  }
+  
+  #Hero_p {
+    font-size: 0.8em;
+  }
+
+  .cl_projects h2 {
+    font-size: 2.5rem;
+  }
+
+  .project-card {
+    min-width: 180px;
   }
 }
