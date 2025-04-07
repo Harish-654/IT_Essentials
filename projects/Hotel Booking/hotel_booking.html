@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Stays | Hotel Booking</title>
+    <link rel="stylesheet" href="hotel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Luxury<span>Stays</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#hotels">Hotels</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+            <label for="nav-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </nav>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <div class="mobile-menu">
+            <div class="mobile-nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#hotels">Hotels</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="mobile-auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Stay</h1>
+            <p>Discover luxury accommodations at the best prices</p>
+            <div class="search-container">
+                <form class="search-box" action="#hotels">
+                    <div class="search-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Where are you going?" required>
+                    </div>
+                    <div class="search-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="date" placeholder="Check-in" required>
+                    </div>
+                    <div class="search-item">
+                        <i class="far fa-calendar-alt"></i>
+                        <input type="date" placeholder="Check-out" required>
+                    </div>
+                    <div class="search-item">
+                        <i class="fas fa-user"></i>
+                        <select>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-hotels" id="hotels">
+        <div class="section-header">
+            <h2>Featured Hotels</h2>
+            <p>Explore our handpicked selection of premium accommodations</p>
+        </div>
+        <div class="hotel-grid">
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Hotel">
+                    <div class="hotel-tag">Popular</div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(4.5)</span>
+                    </div>
+                    <h3>Grand Plaza Hotel</h3>
+                    <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Downtown, New York</p>
+                    <p class="hotel-description">Luxury rooms with city views, spa, and fine dining restaurants.</p>
+                    <div class="hotel-price">
+                        <span class="price">$299</span>
+                        <span class="per-night">per night</span>
+                    </div>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Beach Resort">
+                    <div class="hotel-tag">New</div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(5.0)</span>
+                    </div>
+                    <h3>Oceanview Resort</h3>
+                    <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Miami Beach, Florida</p>
+                    <p class="hotel-description">Beachfront resort with private access, pools, and water sports.</p>
+                    <div class="hotel-price">
+                        <span class="price">$349</span>
+                        <span class="per-night">per night</span>
+                    </div>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mountain Lodge">
+                    <div class="hotel-tag">Trending</div>
+                </div>
+                <div class="hotel-info">
+                    <div class="hotel-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(4.0)</span>
+                    </div>
+                    <h3>Mountain View Lodge</h3>
+                    <p class="hotel-location"><i class="fas fa-map-marker-alt"></i> Aspen, Colorado</p>
+                    <p class="hotel-description">Cozy lodge with mountain views, hiking trails, and spa services.</p>
+                    <div class="hotel-price">
+                        <span class="price">$249</span>
+                        <span class="per-night">per night</span>
+                    </div>
+                    <a href="#" class="book-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-more">
+            <a href="#" class="view-more-btn">View All Hotels</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature-container">
+            <div class="feature">
+                <i class="fas fa-hotel"></i>
+                <h3>Premium Hotels</h3>
+                <p>Access to luxury accommodations worldwide</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-percentage"></i>
+                <h3>Best Rates</h3>
+                <p>Guaranteed lowest prices for your stay</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock customer service</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Booking</h3>
+                <p>Safe and secure payment processing</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <h2>About Luxury Stays</h2>
+            <p>Your trusted partner in luxury travel experiences</p>
+        </div>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Luxury Hotel">
+            </div>
+            <div class="about-content">
+                <h3>Our Story</h3>
+                <p>Founded in 2010, Luxury Stays has been at the forefront of premium hotel bookings for over a decade. We partner with the world's most prestigious hotels to bring you unparalleled luxury experiences at competitive prices.</p>
+                
+                <h3>Our Mission</h3>
+                <p>We're dedicated to making luxury travel accessible while maintaining the highest standards of quality and service. Our team of travel experts carefully curates each hotel to ensure it meets our strict criteria for excellence.</p>
+                
+                <h3>Why Choose Us</h3>
+                <ul class="about-list">
+                    <li><i class="fas fa-check"></i> Exclusive partnerships with premium hotels</li>
+                    <li><i class="fas fa-check"></i> Best rate guarantee</li>
+                    <li><i class="fas fa-check"></i> Personalized travel assistance</li>
+                    <li><i class="fas fa-check"></i> Secure booking process</li>
+                    <li><i class="fas fa-check"></i> 24/7 customer support</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <h2>What Our Guests Say</h2>
+            <p>Real experiences from our satisfied customers</p>
+        </div>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The Grand Plaza Hotel exceeded all my expectations. The staff was incredibly friendly and the room was immaculate. Will definitely book again!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson">
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>Business Traveler</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"Oceanview Resort was the perfect getaway. The beach access was amazing and the amenities were top-notch. A truly memorable experience!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael Chen">
+                    <div class="author-info">
+                        <h4>Michael Chen</h4>
+                        <p>Vacation Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-content">
+                    <p>"The booking process was seamless and the Mountain View Lodge was exactly as described. The views were breathtaking and the service was exceptional."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Rodriguez">
+                    <div class="author-info">
+                        <h4>Emily Rodriguez</h4>
+                        <p>Adventure Seeker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>We're here to help with your travel needs</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>123 Luxury Avenue, New York, NY 10001</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>info@luxurystays.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                        <p>Saturday - Sunday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <h2>Luxury<span>Stays</span></h2>
+                <p>Your gateway to exceptional accommodations worldwide</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Cancellation Options</a>
+                    <a href="#">Safety Information</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Accessibility</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Luxury Stays. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

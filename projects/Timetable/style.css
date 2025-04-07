@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  height: 70px;
+  width: 100vw;
+  padding: 0 30px;
+  background-color: #ffffff;
+  position: fixed;
+  z-index: 100;
+  box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navig {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.navig a {
+  display: flex;
+  align-items: center;
+  justify-items: baseline;
+  float: left;
+  background-color: #1e293b;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 0.1px solid #dbe2eb;
+  border-radius: 10px;
+  margin: 2px;
+  letter-spacing: 5px;
+  font-family: Unna;
+  transition: all 0.5s;
+}
+
+#res {
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Nanum Myeongjo;
+  text-shadow: 0.5px;
+  letter-spacing: 3px;
+  transition: font-size 0.5s, letter-spacing 1s;
+}
+
+#resol {
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Nanum Myeongjo;
+  text-shadow: 0.5px;
+  letter-spacing: 3px;
+  transition: font-size 1s, letter-spacing 1.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#resolv {
+  font-size: 29px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: Nanum Myeongjo;
+  text-shadow: 0.5px;
+  letter-spacing: 3px;
+  transition: font-size 1s, letter-spacing 1.5s;
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+}
+
+#fo {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  padding: 50px;
+  padding-top: 10px;
+}
+
+.label {
+  padding: 20px;
+  margin-top: 20px;
+  font-family: Bodoni Moda SC;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: #ffffff;
+}
+
+#submit {
+  position: absolute;
+  left: 30%;
+  background-color: rgba(255, 193, 193, 0.711);
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#submit:hover {
+  background-color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+#reset {
+  position: absolute;
+  background-color: rgba(255, 194, 194, 0.619);
+  left: 60%;
+  padding: 5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all 1s;
+}
+
+#reset:hover {
+  background-color: rgb(255, 255, 255);
+  letter-spacing: 3px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.imput {
+  float: right;
+  margin-right: 20px;
+  margin-top: px;
+}
+
+#res:hover {
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+#resol:hover {
+  font-size: 40px;
+  letter-spacing: 9px;
+  text-shadow: 2px 2px 4px rgba(168, 176, 17, 0.779),
+    -2px -2px 4px rgba(211, 255, 129, 0.533), 2px -2px 4px rgb(255, 234, 0);
+}
+
+#des {
+  text-decoration: none;
+}
+
+.navig a:hover {
+  background-color: #ddd;
+  color: black;
+  font-size: 20px;
+}
+
+#back {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px);
+  background-repeat: no-repeat;
+  z-index: -1;
+  top: 0%;
+  left: 0%;
+}
+
+#name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  z-index: 99;
+  border-bottom: 1px solid black;
+  color: black;
+  transition: font-size 5s, color 1s, letter-spacing 2s;
+}
+
+#cont {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+
+#name:hover {
+  color: darkblue;
+  border-top: 1px solid darkblue;
+  border-bottom: 1px solid darkblue;
+  font-size: 60px;
+  letter-spacing: 10px;
+}
+
+#click {
+  color: black;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 99;
+  border-bottom: 1px solid black;
+  transition: font-size 2s, color 1s, letter-spacing 2s;
+}
+
+#click:hover {
+  color: darkblue;
+  border-top: 1px solid darkblue;
+  border-bottom: 1px solid darkblue;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+#hotel {
+  color: black;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 99;
+  border-bottom: 1px solid black;
+  transition: font-size 2s, color 1s, letter-spacing 2s;
+}
+
+#hotel:hover {
+  color: darkblue;
+  border-top: 1px solid darkblue;
+  border-bottom: 1px solid darkblue;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+#det {
+  /* float: right; */
+  top: 35%;
+  left: 5%;
+  position: absolute;
+}
+
+#foot {
+  position: fixed;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+#con {
+  position: fixed;
+  left: 5%;
+  bottom: 5%;
+  width: 100%;
+  color: rgb(0, 0, 0);
+}
+
+.soc {
+  background-color: none;
+  width: 100%;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: all 1s;
+}
+
+#ins:hover {
+  background-color: #bd7bd3;
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.5px solid #7a00a3;
+  letter-spacing: 3px;
+}
+
+#li:hover {
+  color: #000000;
+  padding: 5px;
+  border: 0.5px solid #ffffff;
+  border-radius: 5px;
+  letter-spacing: 3px;
+  transition: all 1s, padding 0s;
+}
+
+#li:hover #in {
+  background-color: #2047d3;
+  color: #ffffff;
+  border-radius: 6px;
+  padding: 5px;
+  letter-spacing: none;
+}
+
+#kav:hover {
+  letter-spacing: 5px;
+  font-size: 40px;
+  border-bottom: 1px solid #000000;
+}
+#kav {
+  transition: all 2s;
+}
+
+#skill:hover {
+  letter-spacing: 5px;
+  font-size: 30px;
+  border-bottom: 1px solid #000000;
+}
+#skill {
+  transition: all 2s;
+}
+
+#table {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 99;
+  color: black;
+  transition: font-size 5s, color 1s, letter-spacing 2s;
+  text-align: center;
+  width: 70%;
+  height: 400px;
+}
+
+#table1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  z-index: 99;
+  color: black;
+  transition: font-size 5s, color 1s, letter-spacing 2s;
+  text-align: center;
+  width: 70%;
+}
+
+#flexbox {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.room {
+  height: 300px;
+  width: 300px;
+  padding: 35px;
+  transition: all 1s;
+}
+
+.room:hover {
+  height: 350px;
+  width: 350px;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#time {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#break {
+  vertical-align: middle;
+  writing-mode: vertical-lr;
+  letter-spacing: 15px;
+  background-color: #ad2c15;
+  color: #dbe2eb;
+}
+
+.day {
+  text-align: left;
+}
+
+body {
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}

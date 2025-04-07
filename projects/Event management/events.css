@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Pattaya&display=swap');
+*{
+    border: 1px solid red;
+    margin: 0px;
+    padding: 0px;
+}
+:root{
+    --bg-colour: #dad5e3;
+    --font-colour: #37323E;
+    --brand: #DEB841;
+}
+body{
+    background-color: var(--bg-colour);
+}
+h1{
+    padding-right: 30px;
+    text-align: right;
+    font-size: 5em;
+    font-family: "Pattaya";
+}

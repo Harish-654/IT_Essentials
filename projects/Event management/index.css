@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Pattaya&display=swap');
+:root{
+    --bg-colour: #dad5e3;
+    --font-colour: #37323E;
+    --brand: #DEB841;
+}
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+body{
+    background-color: var(--bg-colour);
+    color: var(--font-colour);
+}
+header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#techofes{
+    text-shadow: 20px 20px 60px;
+    color: var(--brand);
+    margin-left: 3vh;
+    font-size: 3em;
+    font-family: "Pattaya";
+    font-weight: 900;
+}
+.menu{  
+    display: flex;
+    margin-right: 3vh;
+    text-decoration: none;
+}
+.menu div{
+    margin: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--brand);
+    transition: 1s;
+    box-shadow: 15px 15px 100px var(--brand);
+}
+.menu div:hover{
+    transform: scale(1.5);
+}
+.menu div a{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--font-colour);
+    text-decoration: none;
+    padding: 20px;
+}
+#main{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#banner{
+    font-size: 10em;
+    font-family:"Fugaz One";
+    text-shadow: 0px 0px 20px var(--font-colour);
+}
+.cards{
+    background-color: var(--font-colour);
+    color: #dad5e3;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cards div{
+    background-color: #37323E;
+    height: 33vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.head1{
+    font-family: "Pattaya";
+    font-size: 5em;
+}
+.content{
+    font-family: "Fugaz one";
+    font-size: 2em;
+}
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 3em;
+    background-color: #cdc9d9;
+    color: #37323E;
+}
+#about div{
+    font-family: "Fugaz one";
+}

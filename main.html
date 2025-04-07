@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio</title>
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
       @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Imperial+Script&display=swap');
       </style>
@@ -17,10 +18,12 @@
     <section class="hero">
         <img src="img/curved-arrow-with-broken-line.png">
         <p id="pic">This was supposed to be my portrait<br>but,sadly I don't have a good one </p>
-        <div id="Hi">Hi</div>
+        <div id="hero_text_container"><div id="Hi">HI</div>
+        <div id="I_m_Harish">
         <h2 id="I_m">I'm</h2>
-        <h2 id="Name">Harish</h2>
-        <p id="Hero_p"><span id="Trying">Trying</span> out webdev, with so much more intrests to explore<br>let's <span id="traverse">traverse</span> through my "incomplete" projects,<br><em>shall we?</em></p>
+        <h2 id="Name">Harish</h2></div>
+        <p id="Hero_p"><span id="Trying">Trying</span> out webdev, with so much more intrests to explore<br>let's <span id="traverse">traverse</span> through my "incomplete" 
+          projects,<br><em>shall we?</em></p></div>
         <div id="encloser">
         <div id="Button_container">
             <a id="about_link" href="#about"><button id="about_btn">About</button></a><hr>
@@ -90,14 +93,29 @@
         </div>
       </div>
     </section>
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <p>Email: your.email@example.com</p>
-      <p>LinkedIn: yourprofile</p>
+    <section class="contact" id="contact">
+      <div class="contact-container">
+        <h2>Contact Me</h2>
+        <div class="contact-links">
+          <a href="mailto:your.email@example.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>your.email@example.com</span>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/yourusername" target="_blank" class="contact-item">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://twitter.com/yourusername" target="_blank" class="contact-item">
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </footer>  
   </body>
 </html>
