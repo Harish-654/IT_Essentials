@@ -25,7 +25,7 @@ html {
 section {
   scroll-snap-align: start;
 }
-
+  
 body {
   font-family: "agright";
   margin: 0;
@@ -239,7 +239,6 @@ img{
   animation-play-state: paused;
 }
 
-/* Card layout for smaller screens - hidden by default */
 .projects-container {
   display: none;
 }
@@ -361,7 +360,7 @@ footer {
 /* Contact Section Styling */
 .contact {
   background-color: var(--my-yellow);
-  color: var(--my-red);
+  color: #801818;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -379,7 +378,7 @@ footer {
   font-family: "Hatton_light", cursive;
   font-size: 7rem;
   margin-bottom: 3rem;
-  color: var(--my-red);
+  color: #801818;
 }
 
 .contact-links {
@@ -394,7 +393,7 @@ footer {
   align-items: center;
   gap: 1rem;
   padding: 1rem 2rem;
-  background-color: var(--my-red);
+  background-color: #801818;
   color: var(--my-yellow);
   text-decoration: none;
   border-radius: 50px;
