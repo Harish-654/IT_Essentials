@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="events.css">
-</head>
-<body>
+    <link rel="stylesheet" href="events.css" />
+  </head>
+  <body>
     <h1>Upcoming Events</h1>
-    <div>
-        <div>
-            <div>Title</div>
-            <div>Date</div>
-            <div>venue</div>
-            <div>Short desc.</div>
-            <button>Register</button>
-        </div>
-        <div>
-            <div>Title</div>
-            <div>Date</div>
-            <div>venue</div>
-            <div>Short desc.</div>
-            <button>Register</button>
-        </div>
-        <div>
-            <div>Title</div>
-            <div>Date</div>
-            <div>venue</div>
-            <div>Short desc.</div>
-            <button>Register</button>
-        </div>
+    <div class="container">
+      <div class="cards" id="card1">
+        <div class="title">Title</div>
+        <div>Date</div>
+        <div>venue</div>
+        <div>Short desc.</div>
+        <button onclick="document.location='form.html'">Register</button>
+      </div>
+      <div class="cards" id="card2">
+        <div class="title">Title</div>
+        <div>Date</div>
+        <div>venue</div>
+        <div>Short desc.</div>
+        <button onclick="document.location='form.html'">Register</button>
+      </div>
+      <div class="cards" id="card3">
+        <div class="title">Title</div>
+        <div>Date</div>
+        <div>venue</div>
+        <div>Short desc.</div>
+        <button onclick="document.location='form.html'">Register</button>
+      </div>
     </div>
-</body>
+    <div id="home_btn">
+    <button id="home" onclick="document.location='index.html'">
+      <-- back to home
+    </button>
+  </div>
+  </body>
 </html>

@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Pattaya&display=swap");
+
+:root {
+  --bg-colour: #dad5e3;
+  --font-colour: #37323e;
+  --brand: #deb841;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-colour);
+  font-family: Arial, sans-serif;
+}
+body button{
+  
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+label {
+  font-family: "Fugaz One";
+  font-size: 1.2rem; /* Adjusted size for readability on smaller devices */
+  color: var(--font-colour);
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--brand);
+  border-radius: 4px;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--font-colour);
+}
+
+button {
+  background-color: var(--brand);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: var(--font-colour);
+}
+
+#Register {
+  border: 2px solid var(--font-colour);
+  height: 50px;
+  border-radius: 20px;
+  background-color: var(--brand);
+  transition: 0.5s;
+  box-shadow: 5px 5px 20px var(--brand);
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #37323e;
+}
+
+#Register:hover {
+  box-shadow: 0px 0px 10px var(--brand), 0px 0px 20px var(--brand),
+    0px 0px 30px var(--brand);
+  transform: scale(1.05);
+}
+
+h1 {
+  text-shadow: 0px 0px 5px #37323e;
+  font-size: 5em;
+  font-family: "Pattaya";
+  color: var(--font-colour);
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  form {
+    padding: 1rem;
+    gap: 0.8rem;
+    margin: 0px 90px;
+  }
+
+  label {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  #Register {
+    box-shadow: 0px 0px 10px var(--brand);
+    transform: none;
+  }
+}

@@ -1,100 +1,213 @@
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Pattaya&display=swap');
-:root{
-    --bg-colour: #dad5e3;
-    --font-colour: #37323E;
-    --brand: #DEB841;
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Pattaya&display=swap");
+:root {
+  --bg-colour: #dad5e3;
+  --font-colour: #37323e;
+  --brand: #deb841;
 }
 * {
-    padding: 0;
-    margin: 0;
-    /* border: 1px solid red; */
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid red; */
+  user-select: none;
 }
-body{
-    background-color: var(--bg-colour);
-    color: var(--font-colour);
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
-header{
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+#H2 {
+  scroll-snap-align: start;
 }
-#techofes{
-    text-shadow: 20px 20px 60px;
-    color: var(--brand);
-    margin-left: 3vh;
-    font-size: 3em;
-    font-family: "Pattaya";
-    font-weight: 900;
+section:not(#main) {
+  scroll-snap-align: start;
 }
-.menu{  
-    display: flex;
-    margin-right: 3vh;
-    text-decoration: none;
+body {
+  background-color: var(--bg-colour);
+  color: var(--font-colour);
 }
-.menu div{
-    margin: 10px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
+header {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#techofes {
+  text-shadow: 0px 0px 20px #7a797b;
+  color: var(--font-colour);
+  margin-left: 3vh;
+  font-size: 2rem;
+  font-family: "Fugaz One";
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.menu {
+  display: flex;
+  margin-right: 3vh;
+  text-decoration: none;
+}
+.menu div {
+  border: 2px solid var(--font-colour);
+  margin: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: var(--brand);
+  transition: 0.5s;
+  box-shadow: 0px 0px 50px var(--brand), 0px 0px 100px var(--brand);
+}
+.menu div:hover {
+  box-shadow: 0px 0px 10px var(--brand), 0px 0px 20px var(--brand),
+    0px 0px 30px var(--brand), 0px 0px 40px var(--brand);
+  transform: scale(1.1);
+}
+.menu div a {
+  font-family: "Fugaz One";
+  color: var(--font-colour);
+  text-decoration: none;
+  padding: 20px;
+}
+#main {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner {
+  font-size: 10rem;
+  font-family: "Fugaz One";
+  text-shadow: 0px 0px 20px var(--font-colour);
+}
+.cards {
+  background-color: var(--font-colour);
+  color: #dad5e3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.cards div {
+  background-color: #37323e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head1 {
+  font-family: "Pattaya";
+  font-size: 5rem;
+}
+.content {
+  font-family: "Fugaz one";
+  font-size: 2rem;
+}
+#about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 3.5rem;
+  background-color: #c5bede;
+  color: white;
+}
+#about div {
+  font-family: "Fugaz one";
+}
+#Register {
+  border: 2px solid var(--font-colour);
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--brand);
+  transition: 0.5s;
+  box-shadow: 15px 15px 100px var(--brand);
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+#Register:hover {
+  box-shadow: 0px 0px 10px var(--brand), 0px 0px 20px var(--brand),
+    0px 0px 30px var(--brand), 0px 0px 40px var(--brand);
+  transform: scale(1.1);
+}
+.cards a {
+  font-size: 1.5em;
+  font-family: "Fugaz one";
+  text-decoration: none;
+  color: var(--font-colour);
+}
+#regi {
+  background-color: var(--bg-colour);
+  border: 3px solid #deb841;
+  box-shadow: none;
+  transition: 0.5s;
+  &:hover {
     background-color: var(--brand);
-    transition: 1s;
-    box-shadow: 15px 15px 100px var(--brand);
+  }
+  /* box-shadow: 0px 0px 50px var(--brand), 0px 0px 100px var(--brand); */
 }
-.menu div:hover{
-    transform: scale(1.5);
-}
-.menu div a{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: var(--font-colour);
-    text-decoration: none;
-    padding: 20px;
-}
-#main{
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#banner{
-    font-size: 10em;
-    font-family:"Fugaz One";
-    text-shadow: 0px 0px 20px var(--font-colour);
-}
-.cards{
-    background-color: var(--font-colour);
+#regi a {
+  color: #d19e04;
+  &:hover {
     color: #dad5e3;
-    height: 100vh;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-}
-.cards div{
-    background-color: #37323E;
-    height: 33vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-}
-.head1{
-    font-family: "Pattaya";
-    font-size: 5em;
-}
-.content{
-    font-family: "Fugaz one";
-    font-size: 2em;
-}
-#about{
-    display: flex;
-    justify-content: center;
+  }
+
+  #techofes {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    margin: 0px;
+    /* flex-direction: column; */
+    justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    font-size: 3em;
-    background-color: #cdc9d9;
-    color: #37323E;
-}
-#about div{
-    font-family: "Fugaz one";
+    gap: 0.5rem;
+  }
+
+  #banner {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cards {
+    padding: 1rem;
+  }
+
+  .cards div {
+    padding: 1rem;
+  }
+
+  .head1 {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #about {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  #Register {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+  }
 }
